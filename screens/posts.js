@@ -1,12 +1,11 @@
 import React from 'react';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
 
 import CardList from '../layouts/card-list';
-import Loader from '../shared/loader';
 import Api from '../network/api';
 import URLs from '../network/urls';
+import Loader from '../shared/loader';
 
-export default function CategoryScreen({ route, navigation }) {
+export default function CategoryScreen({ route }) {
 	const [posts, setPosts] = React.useState(null);
 
   	let {category} = route.params;
@@ -23,5 +22,3 @@ export default function CategoryScreen({ route, navigation }) {
   	);
 }
 
-const PostsStyles = StyleSheet.create({
-});

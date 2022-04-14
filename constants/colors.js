@@ -15,15 +15,20 @@ const BLUE = {
 	}
 };
 
-const PURPLE = {...BLUE,
+const PURPLE = {
+	...BLUE,
 	GLOBAL: "purple"
 };
 
-const DARK = {...BLUE,
+const DARK = {
+	...BLUE,
 	GLOBAL: "#333"
 };
 
-const THEMES = {BLUE, PURPLE, DARK};
-let chosen = 'BLUE'; // [BLUE, PURPLE, DARK]
+const THEMES = {
+	BLUE,
+	PURPLE,
+	DARK
+};
 
-export default THEMES[chosen];
+export default THEMES.BLUE;

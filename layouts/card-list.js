@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, StyleSheet, Text, Image, View, TouchableOpacity, Dimensions, ActivityIndicator } from 'react-native';
+import { FlatList, StyleSheet, Text, Image, View, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import COLORS from '../constants/colors';

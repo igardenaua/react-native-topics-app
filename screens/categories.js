@@ -1,5 +1,4 @@
 import React from 'react';
-import { Animated, FlatList, StyleSheet, Text, View } from 'react-native';
 
 import Loader from '../shared/loader';
 import Api from '../network/api';
@@ -21,7 +20,3 @@ export default function CategoriesScreen({ route, navigation }) {
 	    />
   	);
 }
-
-const styles = StyleSheet.create({
-
-});

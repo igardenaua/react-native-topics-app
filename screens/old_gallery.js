@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, LogBox, FlatList, View, Image, TouchableOpacity, Dimensions, Animated } from 'react-native';
+import { StyleSheet, LogBox, FlatList, View, Image, TouchableOpacity, Dimensions } from 'react-native';
 import GallerySwiper from "react-native-gallery-swiper";
 import * as Animatable from 'react-native-animatable';
 
@@ -8,20 +8,9 @@ import URLs from "../network/urls";
 
 LogBox.ignoreLogs(['Animated: `useNativeDriver`']);
 
-const staticImages =[
-	'https://picsum.photos/340/500',
-	'http://i.imgur.com/5nltiUd.jpg',
-	'http://i.imgur.com/6vOahbP.jpg',
-	'http://i.imgur.com/kj5VXtG.jpg'
-].map(i => ({
-	source: {
-		uri: i
-	}
-}));
-
 const { width: screenWidth, height: screenHeight } = Dimensions.get('screen');
 
-export default function Gallery({ route, navigation }) {
+export default function Gallery() {
 	const [images, setImages] = React.useState([]);
 	const [isGalleryVisible, toggleGallery] = React.useState(false);
 

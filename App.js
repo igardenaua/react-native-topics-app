@@ -1,10 +1,8 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View, Image, StatusBar, Button, LogBox } from 'react-native';
-import { NavigationContainer, getFocusedRouteNameFromRoute } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { MaterialIcons } from '@expo/vector-icons';
 
 import DrawerStack from './stacks/drawer';
 import COLORS from './constants/colors';
@@ -23,7 +21,7 @@ export default function App() {
         backgroundColor={COLORS.GLOBAL}
         barStyle="light-content" />
       <Stack.Navigator
-        screenOptions={(route) => ({
+        screenOptions={() => ({
           headerTitleAlign: 'center',
           headerStyle: STYLES.header.itself,
           headerTintColor: COLORS.HEADER.TINT,
@@ -46,7 +44,7 @@ export default function App() {
         <Stack.Screen
           name="Item"
           component={ItemScreen}
-          options={({ route }) => ({
+          options={() => ({
             title: 'Σούλι Κορινθίας',          
           })}
         />
@@ -54,7 +52,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const AppStyles = StyleSheet.create({
-  
-});

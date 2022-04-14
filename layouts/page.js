@@ -3,18 +3,15 @@ import { StyleSheet, Text, ScrollView, View, Image, ImageBackground, RefreshCont
 import HTML from "react-native-render-html";
 
 import Carousel from 'react-native-snap-carousel';
-import { scrollInterpolator, animatedStyles } from '../utils/animations';
 
 import * as Animatable from 'react-native-animatable';
 
-import FadeIn from '../animations/fade-in';
 import Api from '../network/api';
 import Loader from '../shared/loader';
 
 
 export default function Page({ data, dataUrl = false }) {
 	const [page, setPage] = React.useState(data);
-	const [carouselIndex, setCarouselIndex] = React.useState(0);
 	const [isRefreshing, setRefreshing] = React.useState(false);
 
 	const CarouselItemWidth = Dimensions.get('window').width - 55;

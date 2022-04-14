@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, StatusBar } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import COLORS from '../constants/colors';
@@ -11,27 +10,27 @@ import AboutScreen from '../screens/about';
 
 const Drawer = createDrawerNavigator();
 
-export default function DrawerStack({route, navigation}) {
+export default function DrawerStack() {
 
   return (
     <Drawer.Navigator
       initialRouteName="Home"
-      screenOptions={(route) => ({
+      screenOptions={() => ({
         headerTitleAlign: 'center',
         headerShown: true,
         headerStyle: STYLES.header.itself,
         headerTintColor: COLORS.HEADER.TINT,
       })}
      >
-      <Drawer.Screen name="Home" component={CategoriesScreen} options={({route}) => ({
+      <Drawer.Screen name="Home" component={CategoriesScreen} options={() => ({
         title: 'Αρχική',
       })}
       />
-      <Drawer.Screen name="Gallery" component={GalleryScreen} options={({route}) => ({
+      <Drawer.Screen name="Gallery" component={GalleryScreen} options={() => ({
 
       })}
       />
-      <Drawer.Screen name="About" component={AboutScreen} options={({route}) => ({
+      <Drawer.Screen name="About" component={AboutScreen} options={() => ({
         title: 'Το μουσείο μας'
       })}
       />
@@ -39,6 +38,3 @@ export default function DrawerStack({route, navigation}) {
   );
 }
 
-const DrawerStyles = StyleSheet.create({
-  
-});

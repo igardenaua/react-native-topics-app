@@ -1,13 +1,9 @@
 import React from 'react';
 import {
-    StatusBar,
     FlatList,
     Image,
-    // Animated,
-    Text,
     View,
     Dimensions,
-    StyleSheet,
     TouchableOpacity
 } from 'react-native';
 import Api from '../network/api';

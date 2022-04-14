@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyleSheet, /*Text, ScrollView, View, Image, ImageBackground*/ } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import Page from '../layouts/page';
@@ -18,7 +17,3 @@ export default function PostScreen({ route }) {
 	
   	return <Page data={item} dataUrl={URLs.postWithID(item.id)} />;
 }
-
-const ItemStyles = StyleSheet.create({
-
-});
