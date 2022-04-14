@@ -1,4 +1,4 @@
-export default function Card(props) {
+export default function Card() {
 	return (
 		<View style={styles.card}>
 	      { item.image != null && item.image.length > 0 && (
